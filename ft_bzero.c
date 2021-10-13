@@ -6,13 +6,13 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:49:50 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/05 18:07:21 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:08:57 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void	*s, size_t	n)
+void	ft_bzero(void	*s, size_t	n)
 {
 	char	*tmp = s;
 	while (n-- > 0)

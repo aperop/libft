@@ -6,9 +6,11 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:51:50 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/06 12:55:26 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:14:06 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char	*str)
 {

@@ -6,11 +6,15 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 18:58:30 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/05 18:59:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/13 17:52:33 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-	return (c - 'A' + 'a');
+	if (c >= 'A' && c <= 'Z')
+		return (c - 'A' + 'a');
+	return (c);
 }

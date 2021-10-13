@@ -6,13 +6,13 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:30:47 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/05 17:46:25 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/13 15:09:39 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void	*b, int	c, size_t	len)
+void	*ft_memset(void	*b, int	c, size_t	len)
 {
 	char	*tmp = b;
 	while (len-- > 0)
