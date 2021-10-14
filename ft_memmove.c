@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:46:08 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/14 16:19:12 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/14 18:30:16 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	*ft_memmove(void	*dst, const void	*src, size_t	len)
 	}
 	else
 	{
-		ls = s + (len - 1);
-		ld = d + (len - 1);
+		ls = (char	*)(s + (len - 1));
+		ld = (d + (len - 1));
 		while (len--)
 			*ld-- = *ls--;
 	}
