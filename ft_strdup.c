@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:59:05 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/13 15:09:53 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:21:10 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	size_t	s1len;
 	char	*cp;
-	
+
 	s1len = ft_strlen(s1) + 1;
 	cp = malloc(s1len);
 	if (cp == 0)

@@ -6,20 +6,18 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 15:49:20 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/05 16:21:23 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:23:06 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char	*s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
-	
+
 	i = 0;
 	while (*(s + i))
-	{
 		i++;
-	}
 	return (i);
 }

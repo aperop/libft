@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:49:50 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/13 15:08:57 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:11:44 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_bzero(void	*s, size_t	n)
 {
-	char	*tmp = s;
+	char	*tmp;
+
+	tmp = s;
 	while (n-- > 0)
 	{
 		*tmp++ = 0;
