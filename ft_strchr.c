@@ -6,20 +6,23 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:11:00 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/14 18:31:24 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/17 19:26:45 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	ищет первое вхождение символа с в строку s. 
+	область поиска ограничена strlen+1
+	(\0 рассматривается как часть строки)
+*/
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*tmp;
-
-	tmp = (char	*)s;
-	while (*tmp != c && *tmp)
-		tmp++;
-	if (*tmp != c)
-		*tmp = 0;
-	return (tmp);
+	while (*s != c && *s)
+		s++;
+	if (*s == c)
+		return ((char *)s);
+	else
+		return (0);
 }

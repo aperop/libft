@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 14:41:23 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 19:41:56 by dhawkgir         ###   ########.fr       */
+/*   Created: 2021/10/17 20:10:32 by dhawkgir          #+#    #+#             */
+/*   Updated: 2021/10/17 20:10:33 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+#include "libft.h"
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	index;
+	t_list	*list;
 
-	index = 0;
-	while (*(s + index) && f)
+	list = (t_list *)malloc(sizeof(list));
+	if (list)
 	{
-		f(index, s + index);
+		list->content = content;
+		list->next = NULL;
 	}
+	return (list);
 }

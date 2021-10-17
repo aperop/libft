@@ -6,16 +6,21 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:03:57 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 13:05:50 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/17 15:27:04 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	ищет первое вхождение символа с в область памяти s, ограниченной n байт
+	возвращает указатель на искомый байт, либо NULL, если не найдено
+*/
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
+	i = 0;
 	while (i < n)
 	{
 		if (*((unsigned char *)s + i) == (unsigned char)c)
