@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 12:46:31 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/13 14:20:54 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/17 13:17:39 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char	*s, int	fd)
 {
+	if (!s || fd < 0)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 }
