@@ -6,14 +6,18 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 20:30:23 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 20:30:24 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/19 11:01:31 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+
+*/
 #include "libft.h"
-int		ft_lstsize(t_list *lst)
+
+int	ft_lstsize(t_list *lst)
 {
-	int		count;
+	int	count;
 
 	count = 0;
 	while (lst)

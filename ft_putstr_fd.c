@@ -6,13 +6,16 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 12:46:31 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 13:17:39 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/19 11:00:23 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Функция ft_putstr_fd выводит строку s в файловый дискриптор fd.
+*/
 #include "libft.h"
 
-void	ft_putstr_fd(char	*s, int	fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s || fd < 0)
 		return ;

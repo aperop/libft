@@ -6,13 +6,17 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:19:41 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 16:29:53 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/19 10:59:38 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Функция ft_putendl_fd выводит строку s
+с символом переноса строки \n в файловый дискриптор fd.
+*/
 #include "libft.h"
 
-void	ft_putendl_fd(char	*s, int	fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s || fd < 0)
 		return ;

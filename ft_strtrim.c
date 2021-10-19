@@ -6,14 +6,16 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:59:08 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 19:33:25 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/19 10:50:00 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	возвращает указатель на замолоченную строку
-	содержимое новой строки это остаток от s1, подрезанной с начала и с конца.
-	выкидывает с начала и с конца символы, которые содержатся в строке set
+Функция ft_strtrim выделяет (с помощью malloc) и возвращает копию строки,
+заданной в качестве аргумента, без пробелов в начале или конце строки.
+Будут считаться пробелами символы из массива set.
+Если у s нет пробелов в начале или в конце, функция возвращает копию s.
+Если распределение завершается неудачно, функция возвращает NULL.
 */
 #include "libft.h"
 
@@ -26,11 +28,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	start = 0;
 	end = ft_strlen(s1);
-	while (*(s1 + start) && ft_strchr(set, *(s + start)))
+	while (*(s1 + start) && ft_strchr(set, *(s1 + start)))
 		start++;
 	if (start == end || end == 0)
-		return (ft_strdup("\0");
-	while (ft_strchr(set, *(s + end)))
+		return (ft_strdup("\0"));
+	while (ft_strchr(set, *(s1 + end)))
 		end--;
-	return (ft_substr(s, start, end - start + 1));
+	return (ft_substr(s1, start, end - start + 1));
 }

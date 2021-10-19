@@ -6,11 +6,15 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 20:51:15 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 20:51:16 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/19 11:01:41 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+
+*/
 #include "libft.h"
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;

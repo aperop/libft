@@ -6,11 +6,15 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 20:42:41 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/17 20:42:42 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/19 11:10:21 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Функция ft_lstiter применяет функцию f к каждому листу списка ls.
+*/
 #include "libft.h"
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst && f)
