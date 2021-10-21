@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 15:06:13 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/19 10:38:19 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/21 14:04:33 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ strlcat принимает полный размер буфера и гаран�
 */
 #include "libft.h"
 
-size_t	strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 	size_t	count;

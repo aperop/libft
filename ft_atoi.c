@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:51:50 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/19 10:53:57 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:11:25 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,27 @@
 
 int	ft_atoi(const char *str)
 {
-	int				i;
-	int				sign;
-	unsigned int	number;
+	size_t	i;
+	int		sign;
+	size_t	number;
 
 	number = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+	if (!*str)
+		return (0);
+	while (*(str + i) == ' ' || (*(str + i) >= '\t' && *(str + i) <= '\r'))
 		i++;
-	if (str[i] == '-')
-		sign *= -1;
-	while (str[i] >= '0' && str[i] <= '9')
+	if (*(str + i) == '-')
+		sign = -1;
+	if (*(str + i) == '+' || *(str + i) == '-')
+		i++;
+	while (*(str + i) >= '0' && *(str + i) <= '9')
 	{
-		number = number * 10 + str[i] - '0';
+		number = number * 10 + *(str + i) - '0';
 		i++;
 	}
+	if (number > 2147483648)
+		return (-1 + (sign < 0 && number > 2147483648));
 	return (sign * number);
 }

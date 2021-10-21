@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:58 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/19 10:45:30 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/21 17:01:22 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (0);
 	len = ft_strlen(s);
 	str = (char *)malloc((len + 1) * sizeof(char));
-	if (str == 0)
-		return (str);
+	if (!str)
+		return (0);
 	i = 0;
 	while (*(s + i) && f)
 	{
 		*(str + i) = f(i, *(s + i));
 		i++;
 	}
+	*(str + i) = '\0';
 	return (str);
 }

@@ -6,20 +6,18 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 20:30:33 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/19 11:01:35 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:34:37 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-
+Функция ft_lstlast возвращает указатель на последний элемент списка lst.
 */
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
-	{
+	while (lst && lst->next)
 		lst = lst->next;
-	}
 	return (lst);
 }

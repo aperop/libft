@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:10 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/19 10:51:29 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/21 21:56:51 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,16 @@
 */
 #include "libft.h"
 
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c)
+{
+	unsigned int	wrdcnt;
+	unsigned int	index;
+	char			**strsplit;
+
+	if (!s)
+		return (0);
+	wrdcnt = 0;
+	index = 0;
+	
+	return (strsplit);
+}

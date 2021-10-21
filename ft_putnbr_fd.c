@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:28:46 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/19 10:59:57 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/21 15:39:47 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
+	{
 		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
