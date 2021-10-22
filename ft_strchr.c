@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:11:00 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/21 20:19:48 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/22 15:40:18 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
-	while (*(s + i) != c && *(s + i))
+	while (*(s + i) != (char)c && *(s + i))
 		i++;
-	if (*(s + i) == c)
+	if (*(s + i) == (char)c)
 		return ((char *)s + i);
 	else
 		return (0);

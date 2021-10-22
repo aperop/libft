@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:10 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/21 21:56:51 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/22 14:55:52 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,62 @@
 */
 #include "libft.h"
 
+static unsigned int	ft_countwords(char const *s, char c)
+{
+	unsigned int	count;
+	unsigned int	index;
+
+	count = 0;
+	index = 0;
+	while (*(s + index))
+	{
+		if (*(s + index) == c)
+			index++;
+		else
+		{
+			count++;
+			while (*(s + index) && *(s + index) != c)
+				index++;
+		}
+	}
+	return (count);
+}
+
+static unsigned int	ft_wordlen(char const *s, char c)
+{
+	unsigned int	index;
+
+	index = 0;
+	while (*(s + index) && *(s + index) != c)
+		index++;
+	return (index);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	wrdcnt;
 	unsigned int	index;
+	unsigned int	wrdlen;
 	char			**strsplit;
 
-	if (!s)
-		return (0);
 	wrdcnt = 0;
 	index = 0;
-	
+	if (s && *s)
+		wrdcnt = ft_countwords(s, c);
+	strsplit = (char **)malloc((wrdcnt + 1) * sizeof(char *));
+	if (!strsplit)
+		return (0);
+	while (wrdcnt--)
+	{
+		while (*s && *s == c)
+			s++;
+		wrdlen = ft_wordlen(s, c);
+		*(strsplit + index) = ft_substr(s, 0, wrdlen);
+		if (!*(strsplit + index))
+			return (0);
+		s = s + wrdlen;
+		index++;
+	}
+	*(strsplit + index) = 0;
 	return (strsplit);
 }

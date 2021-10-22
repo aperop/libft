@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:28 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/21 20:18:40 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/22 15:25:51 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	s = (char *)malloc((len + 1) * sizeof(s));
+	s = (char *)malloc((len + 1) * sizeof(char));
 	if (!s)
 		return (0);
 	count1 = 0;
