@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 14:59:05 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/22 15:10:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/22 16:19:39 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strdup(const char *s1)
 	cp = (char *)malloc(s1len * sizeof(char));
 	if (cp == 0)
 		return (cp);
-	ft_memcpy(cp, s1, s1len);
-	*(cp + s1len) = '\0';
+	ft_strlcpy(cp, s1, s1len);
 	return (cp);
 }
