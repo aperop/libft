@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+el/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:10 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/22 14:55:52 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/10/29 15:43:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,16 @@ static unsigned int	ft_wordlen(char const *s, char c)
 	return (index);
 }
 
+static void	ft_free(char **str, int count)
+{
+	while (count)
+	{
+		free(*(str + count));
+		count--;
+	}
+	free(str);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	wrdcnt;
@@ -70,7 +80,10 @@ char	**ft_split(char const *s, char c)
 		wrdlen = ft_wordlen(s, c);
 		*(strsplit + index) = ft_substr(s, 0, wrdlen);
 		if (!*(strsplit + index))
+		{
+			ft_free(strsplit, index);
 			return (0);
+		}
 		s = s + wrdlen;
 		index++;
 	}
