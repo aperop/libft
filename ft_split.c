@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:10 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/29 15:43:01 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/11/02 00:56:19 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static unsigned int	ft_wordlen(char const *s, char c)
 	return (index);
 }
 
-static void	ft_free(char **str, int count)
+static char	**ft_free(char **str, int count)
 {
 	while (count)
 	{
@@ -57,13 +57,13 @@ static void	ft_free(char **str, int count)
 		count--;
 	}
 	free(str);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	wrdcnt;
 	unsigned int	index;
-	unsigned int	wrdlen;
 	char			**strsplit;
 
 	wrdcnt = 0;
@@ -77,14 +77,10 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		wrdlen = ft_wordlen(s, c);
-		*(strsplit + index) = ft_substr(s, 0, wrdlen);
+		*(strsplit + index) = ft_substr(s, 0, ft_wordlen(s, c));
 		if (!*(strsplit + index))
-		{
-			ft_free(strsplit, index);
-			return (0);
-		}
-		s = s + wrdlen;
+			return (ft_free(strsplit, index));
+		s = s + ft_wordlen(s, c);
 		index++;
 	}
 	*(strsplit + index) = 0;
