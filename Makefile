@@ -6,7 +6,7 @@
 #    By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 17:59:45 by dhawkgir          #+#    #+#              #
-#    Updated: 2021/10/29 15:54:24 by dhawkgir         ###   ########.fr        #
+#    Updated: 2021/11/11 17:58:52 by dhawkgir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ $(NAME): $(OBJ)
 		$(CC) $(FLAGS) -I $(PATH_INCLS) -c $<
 
 bonus: all
-		make OBJ="$(OBJ_B)"
+		make OBJ="$(OBJ_B)" all
 	
 clean:
 		$(RM) $(OBJ) $(OBJ_B)
