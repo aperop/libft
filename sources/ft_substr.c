@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:59:14 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/10/29 15:54:20 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Если start и len не ссылаются на допустимую подстроку, поведение не определено.
 Если распределение завершается неудачно, функция возвращает NULL.
 */
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:46:08 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/11/02 00:26:13 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 на который указывает аргумент dst.
 При этом массивы (области памяти) могут пересекаться.
 */
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
