@@ -2,7 +2,7 @@
 
 This project is very first project as a student at 42.\
 Was need to recode a few functions of the C standard library as well as some other utility functions that will use during whole cursus. <br>
-You can read task: [`libft`](subject/en.libft.pdf)
+You can read task: [`libft`](en.libft.pdf)
 
 ### Libc functions
 <table>
