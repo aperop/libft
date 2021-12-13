@@ -6,7 +6,7 @@
 #    By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 17:59:45 by dhawkgir          #+#    #+#              #
-#    Updated: 2021/11/11 17:58:52 by dhawkgir         ###   ########.fr        #
+#    Updated: 2021/12/13 13:22:30 by dhawkgir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,25 +16,35 @@ CC = cc
 
 FLAGS = -Wall -Wextra -Werror
 
-PATH_SRCS = ./
+PATH_SRCS = ./sourses/
 
 PATH_INCLS = ./
 
-SRCS =	ft_atoi.c		ft_bzero.c		ft_calloc.c		ft_isalnum.c	\
-		ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
-		ft_itoa.c		ft_memchr.c		ft_memcmp.c		ft_memcpy.c		\
-		ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c	\
-		ft_putnbr_fd.c	ft_putstr_fd.c	ft_split.c		ft_strchr.c		\
-		ft_strdup.c		ft_striteri.c	ft_strjoin.c	ft_strlcat.c	\
-		ft_strlcpy.c	ft_strlen.c		ft_strmapi.c	ft_strncmp.c	\
-		ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c		\
-		ft_tolower.c	ft_toupper.c
+SRCS =	$(PATH_SRCS)atoi.c			$(PATH_SRCS)bzero.c			\
+		$(PATH_SRCS)calloc.c		$(PATH_SRCS)isalnum.c		\
+		$(PATH_SRCS)isalpha.c		$(PATH_SRCS)isascii.c		\
+		$(PATH_SRCS)isdigit.c		$(PATH_SRCS)isprint.c		\
+		$(PATH_SRCS)itoa.c			$(PATH_SRCS)memchr.c		\
+		$(PATH_SRCS)memcmp.c		$(PATH_SRCS)memcpy.c		\
+		$(PATH_SRCS)memmove.c		$(PATH_SRCS)memset.c		\
+		$(PATH_SRCS)putchar_fd.c	$(PATH_SRCS)putendl_fd.c	\
+		$(PATH_SRCS)putnbr_fd.c		$(PATH_SRCS)putstr_fd.c		\
+		$(PATH_SRCS)split.c			$(PATH_SRCS)strchr.c		\
+		$(PATH_SRCS)strdup.c		$(PATH_SRCS)striteri.c		\
+		$(PATH_SRCS)strjoin.c		$(PATH_SRCS)strlcat.c		\
+		$(PATH_SRCS)strlcpy.c		$(PATH_SRCS)strlen.c		\
+		$(PATH_SRCS)strmapi.c		$(PATH_SRCS)strncmp.c		\
+		$(PATH_SRCS)strnstr.c		$(PATH_SRCS)strrchr.c		\
+		$(PATH_SRCS)strtrim.c		$(PATH_SRCS)substr.c		\
+		$(PATH_SRCS)tolower.c		$(PATH_SRCS)toupper.c
 
 INCLS = libft.h
 
-BNS =	ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c	\
-		ft_lstdelone.c		ft_lstiter.c		ft_lstlast.c	\
-		ft_lstmap.c			ft_lstnew.c			ft_lstsize.c
+BNS =	$(PATH_SRCS)lstadd_back.c	$(PATH_SRCS)lstadd_front.c	\
+		$(PATH_SRCS)lstclear.c		$(PATH_SRCS)lstdelone.c		\
+		$(PATH_SRCS)lstiter.c		$(PATH_SRCS)lstlast.c		\
+		$(PATH_SRCS)lstmap.c		$(PATH_SRCS)lstnew.c		\
+		$(PATH_SRCS)lstsize.c
 
 OBJ = $(patsubst %.c, %.o, $(SRCS))
 OBJ_B = $(patsubst %.c, %.o, $(BNS))
