@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 16:03:53 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 00:23:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Каждый байт массива определяется типом unsigned char. Сравнение продолжается,
 пока не будут проверено n байт или пока не встретятся отличающиеся байты.
 */
-#include "../libft.h"
+#include "../includes/libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

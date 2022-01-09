@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 15:05:20 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 00:23:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	строка dst будет гарантированно нуль-терминирована.
 	возвращает длину src
 */
-#include "../libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

@@ -6,7 +6,7 @@
 #    By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/14 17:59:45 by dhawkgir          #+#    #+#              #
-#    Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr        #
+#    Updated: 2022/01/09 14:59:45 by dhawkgir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,38 +16,34 @@ CC = cc
 
 FLAGS = -Wall -Wextra -Werror
 
-PATH_SRCS = ./sources/
+PATH_SRCS = sources/
+PATH_INCLS = includes/
 
-PATH_INCLS = ./
+SRCS =	$(addprefix $(PATH_SRCS),				\
+		ft_atoi.c			ft_bzero.c			\
+		ft_calloc.c			ft_isalnum.c		\
+		ft_isalpha.c		ft_isascii.c		\
+		ft_isdigit.c		ft_isprint.c		\
+		ft_itoa.c			ft_memchr.c			\
+		ft_memcmp.c			ft_memcpy.c			\
+		ft_memmove.c		ft_memset.c			\
+		ft_putchar_fd.c		ft_putendl_fd.c		\
+		ft_putnbr_fd.c		ft_putstr_fd.c		\
+		ft_split.c			ft_strchr.c			\
+		ft_strdup.c			ft_striteri.c		\
+		ft_strjoin.c		ft_strlcat.c		\
+		ft_strlcpy.c		ft_strlen.c			\
+		ft_strmapi.c		ft_strncmp.c		\
+		ft_strnstr.c		ft_strrchr.c		\
+		ft_strtrim.c		ft_substr.c			\
+		ft_tolower.c		ft_toupper.c		\
+		ft_lstadd_back.c	ft_lstadd_front.c	\
+		ft_lstclear.c		ft_lstdelone.c		\
+		ft_lstiter.c		ft_lstlast.c		\
+		ft_lstmap.c			ft_lstnew.c			\
+		ft_lstsize.c		get_next_line.c)
 
-SRCS =	$(PATH_SRCS)ft_atoi.c			$(PATH_SRCS)ft_bzero.c			\
-		$(PATH_SRCS)ft_calloc.c			$(PATH_SRCS)ft_isalnum.c		\
-		$(PATH_SRCS)ft_isalpha.c		$(PATH_SRCS)ft_isascii.c		\
-		$(PATH_SRCS)ft_isdigit.c		$(PATH_SRCS)ft_isprint.c		\
-		$(PATH_SRCS)ft_itoa.c			$(PATH_SRCS)ft_memchr.c			\
-		$(PATH_SRCS)ft_memcmp.c			$(PATH_SRCS)ft_memcpy.c			\
-		$(PATH_SRCS)ft_memmove.c		$(PATH_SRCS)ft_memset.c			\
-		$(PATH_SRCS)ft_putchar_fd.c		$(PATH_SRCS)ft_putendl_fd.c		\
-		$(PATH_SRCS)ft_putnbr_fd.c		$(PATH_SRCS)ft_putstr_fd.c		\
-		$(PATH_SRCS)ft_split.c			$(PATH_SRCS)ft_strchr.c			\
-		$(PATH_SRCS)ft_strdup.c			$(PATH_SRCS)ft_striteri.c		\
-		$(PATH_SRCS)ft_strjoin.c		$(PATH_SRCS)ft_strlcat.c		\
-		$(PATH_SRCS)ft_strlcpy.c		$(PATH_SRCS)ft_strlen.c			\
-		$(PATH_SRCS)ft_strmapi.c		$(PATH_SRCS)ft_strncmp.c		\
-		$(PATH_SRCS)ft_strnstr.c		$(PATH_SRCS)ft_strrchr.c		\
-		$(PATH_SRCS)ft_strtrim.c		$(PATH_SRCS)ft_substr.c			\
-		$(PATH_SRCS)ft_tolower.c		$(PATH_SRCS)ft_toupper.c
-
-INCLS = ../libft.h
-
-BNS =	$(PATH_SRCS)ft_lstadd_back.c	$(PATH_SRCS)ft_lstadd_front.c	\
-		$(PATH_SRCS)ft_lstclear.c		$(PATH_SRCS)ft_lstdelone.c		\
-		$(PATH_SRCS)ft_lstiter.c		$(PATH_SRCS)ft_lstlast.c		\
-		$(PATH_SRCS)ft_lstmap.c			$(PATH_SRCS)ft_lstnew.c			\
-		$(PATH_SRCS)ft_lstsize.c
-
-OBJ = $(patsubst %.c, %.o, $(SRCS))
-OBJ_B = $(patsubst %.c, %.o, $(BNS))
+OBJ = $(SRCS:.c=.o)
 
 RM = rm -f
 
@@ -56,18 +52,18 @@ all: $(NAME)
 $(NAME): $(OBJ)
 		ar rcs $(NAME) $?
 
-$(PATH_SRCS)%.o: %.c $(INCLS)
-		$(CC) $(FLAGS) -I $(PATH_INCLS) -c $< $(PATH_SRCS)
+%.o: %.c ${PATH_INCLS}/*.h
+		$(CC) $(FLAGS) -I ${PATH_INCLS} -c $< -o $@
 
-bonus: all
-		make OBJ="$(OBJ_B)" all
-	
 clean:
-		$(RM) $(OBJ) $(OBJ_B)
+		$(RM) $(OBJ)
 
 fclean: clean
 		$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+norm:
+	norminette $(PATH_SRCS) ${PATH_INCLS}
+
+.PHONY: all clean fclean re norm

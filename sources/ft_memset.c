@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:30:47 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 00:23:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 на которую указывает аргумент b, символом,
 код которого указывается аргументом c.
 */
-#include "../libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

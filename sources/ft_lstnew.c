@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 20:10:32 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 00:23:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Переменная next инициализируется значением NULL.
 Если распределение завершается неудачно, функция возвращает NULL.
 */
-#include "../libft.h"
+#include "../includes/libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

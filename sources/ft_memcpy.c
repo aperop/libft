@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 18:09:26 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 00:23:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Если массивы перекрываются, результат копирования будет не определен.
 */
 
-#include "../libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

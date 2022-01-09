@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 16:58:58 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 00:23:01 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 чтобы создать «свежую» новую строку (с malloc),
 полученную в результате последовательного применения f.
 */
-#include "../libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

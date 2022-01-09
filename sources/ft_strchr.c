@@ -6,7 +6,7 @@
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 15:11:00 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/12/13 13:57:38 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 13:42:38 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 код которого указан в аргументе c, в строке,
 на которую указывает аргумент s.
 */
-#include "../libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (*(s + i) != (char)c && *(s + i))
 		i++;
 	if (*(s + i) == (char)c)

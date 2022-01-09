@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ../libft.h                                            :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhawkgir <dhawkgir@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:22:40 by dhawkgir          #+#    #+#             */
-/*   Updated: 2021/11/11 17:48:07 by dhawkgir         ###   ########.fr       */
+/*   Updated: 2022/01/09 13:54:39 by dhawkgir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 128
+# endif
 
 typedef struct s_list
 {
@@ -64,4 +69,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+char	*get_next_line(int fd);
 #endif
