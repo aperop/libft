@@ -1,5 +1,19 @@
 {
-    "42header.email": "dhawkgir@student.21-school.ru",
-    "42header.username": "dhawkgir",
-    "editor.renderWhitespace": "all",
+	"workbench.colorTheme": "Monokai",
+	"files.autoSave": "afterDelay",
+	"42header.username": "dhawkgir",
+	"42header.email": "dhawkgir@student.21-school.ru",
+	"editor.minimap.enabled": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"workbench.preferredDarkColorTheme": "Monokai",
+	"editor.renderWhitespace": "all",
+	"editor.insertSpaces": false,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"editor.wordWrap": "on",
+	//@sync-ignore
+	"window.zoomLevel": -1,
+	"editor.mouseWheelZoom": true
 }
