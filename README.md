@@ -4,7 +4,7 @@ This project is very first project as a student at 42.\
 Was need to recode a few functions of the C standard library as well as some other utility functions that will use during whole cursus. <br>
 You can read task: [`libft`](en.libft.pdf)
 
-[![42Project Score](https://badge42.herokuapp.com/api/project/dhawkgir/Libft)](https://projects.intra.42.fr/projects/42cursus-libft/projects_users/2364363)
+<!-- [![42Project Score](https://badge42.herokuapp.com/api/project/dhawkgir/Libft)](https://projects.intra.42.fr/projects/42cursus-libft/projects_users/2364363) -->
 
 ### Libc functions
 <table>
